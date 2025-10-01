@@ -1,7 +1,7 @@
-import{listarLugares,buscarPersonaje, inventarioConFrases} from "./funciones"
+import{listarLugares,buscarPersonaje, inventarioConFrases,agruparObjetosPorCategoria,poderTotalInventario} from "./funciones"
 
 const index = () => {
-  const opcion: number = 3; // Cambia este número para probar
+  const opcion: number = 4; // Cambia este número para probar
  
   switch (opcion) {
     case 1:
@@ -15,10 +15,10 @@ const index = () => {
       console.log(inventarioConFrases());
       break;
     case 4:
-      //console.log(agruparObjetosPorCategoria());
+      console.log(agruparObjetosPorCategoria());
       break;
     case 5:
-      //console.log("Poder total:", poderTotalInventario());
+      console.log("Poder total:", poderTotalInventario());
       break;
 
     default:

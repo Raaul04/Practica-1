@@ -1,5 +1,5 @@
 import{lugares,objetos,personajes} from "./data"
-import { Personaje } from "./types"
+import { Personaje,Objeto } from "./types"
 
 export const listarLugares=()=>{
     lugares.forEach((l)=>{
@@ -25,7 +25,26 @@ export const inventarioConFrases=():string[]=>{
     return `${o.nombre}(+${o.poder} poder, categoria:${o.categoria})`
   })
 
+}
+
+export const agruparObjetosPorCategoria = (): Record<string, number> => {
+  return objetos.reduce<Record<string, number>>((acc, n) => {
+    const poderPrevio = acc[n.categoria] ?? 0;
+    return {
+      ...acc,
+      [n.categoria]: poderPrevio + n.poder
+    };
+  }, {});
+};
 
 
+const index = 0;
 
+export const poderTotalInventario = () : number => {
+
+
+return objetos.reduce((acc,n)=>{
+  return n.poder+acc
+
+},index)
 }
