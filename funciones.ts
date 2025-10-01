@@ -14,7 +14,7 @@ const resultado = personajes.filter((p) => {
   `Encontrado: ${p.nombre}, fuerza: ${p.fuerza}, ${p.aliado ? "Aliado" : "Enemigo"}`
   );
     return true; 
-  }
+  } 
   return false;
 });
 }
