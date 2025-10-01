@@ -1,7 +1,7 @@
-import{listarLugares,buscarPersonaje} from "./funciones"
+import{listarLugares,buscarPersonaje, inventarioConFrases} from "./funciones"
 
 const index = () => {
-  const opcion: number = 1; // Cambia este número para probar
+  const opcion: number = 3; // Cambia este número para probar
  
   switch (opcion) {
     case 1:
@@ -12,7 +12,7 @@ const index = () => {
       buscarPersonaje(nombreBuscado);
       break;
     case 3:
-      //console.log(inventarioConFrases());
+      console.log(inventarioConFrases());
       break;
     case 4:
       //console.log(agruparObjetosPorCategoria());

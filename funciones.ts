@@ -3,7 +3,7 @@ import { Personaje } from "./types"
 
 export const listarLugares=()=>{
     lugares.forEach((l)=>{
-        console.log(l.nombre+", peligro:"+ l.peligro)
+        console.log(l.nombre+" , peligro:"+ l.peligro)
     })
 }
 
@@ -19,3 +19,13 @@ const resultado = personajes.filter((p) => {
 });
 }
 
+export const inventarioConFrases=():string[]=>{
+
+  return objetos.map((o)=>{
+    return `${o.nombre}(+${o.poder} poder, categoria:${o.categoria})`
+  })
+
+
+
+
+}
